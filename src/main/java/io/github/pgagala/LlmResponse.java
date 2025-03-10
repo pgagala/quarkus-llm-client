@@ -1,4 +1,4 @@
-package org.github.pgagala;
+package io.github.pgagala;
 
 import java.util.List;
 

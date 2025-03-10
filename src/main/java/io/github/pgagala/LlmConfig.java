@@ -1,4 +1,4 @@
-package org.github.pgagala;
+package io.github.pgagala;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;

@@ -1,4 +1,4 @@
-package org.github.pgagala;
+package io.github.pgagala;
 
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;

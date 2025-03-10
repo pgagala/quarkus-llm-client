@@ -1,4 +1,4 @@
-package org.github.pgagala;
+package io.github.pgagala;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.POST;
@@ -22,6 +22,7 @@ public class LlmResource {
 
     /**
      * Chat endpoint for sending prompts to the LLM
+     *
      * @param request The chat request containing the prompt
      * @return A CompletionStage with the LLM's response
      */
@@ -39,27 +40,11 @@ public class LlmResource {
 
         return langChainService.generateResponse(request.message())
             .thenApply(response -> Response.ok(new ChatResponse(response)).build())
-            .exceptionally(throwable -> 
+            .exceptionally(throwable ->
                 Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                     .entity(new ErrorResponse(throwable.getMessage()))
                     .build()
             );
     }
 
-    /**
-     * Chat request record
-     */
-    public record ChatRequest(String message) {
-    }
-
-    /**
-     * Chat response record
-     */
-    public record ChatResponse(String response) {
-    }
-
-    /**
-     * Error response record
-     */
-    public record ErrorResponse(String details) {}
 }

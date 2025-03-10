@@ -1,4 +1,4 @@
-package org.github.pgagala;
+package io.github.pgagala;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.UserMessage;
