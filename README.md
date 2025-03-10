@@ -6,12 +6,12 @@ This is a Quarkus application that communicates with a locally running LLM serve
 
 - JDK 21 or later
 - Maven 3.8.1+
-- Docker and Docker Compose (recommended for easy setup)
+- Docker and Docker Compose
 - Ollama (if not using Docker)
 
 ## Local LLM Setup
 
-### Option 1: Using Docker Compose (Recommended)
+### Option 1: Using Docker Compose
 
 The simplest way to set up the local LLM environment is using Docker Compose:
 
@@ -97,15 +97,6 @@ POST /llm/advanced/chat-with-memory
 ```
 
 Subsequent messages will be processed in the context of the conversation history.
-
-### Specialized Agents
-
-The customer support endpoint uses a specialized agent with a system prompt:
-
-```
-POST /llm/advanced/customer-support
-{"message": "How do I reset my password?"}
-```
 
 ## Customizing LLM Parameters
 
