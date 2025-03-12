@@ -11,21 +11,6 @@ This is a Quarkus application that communicates with a locally running LLM serve
 
 ## Local LLM Setup
 
-### Option 1: Using Docker Compose
-
-The simplest way to set up the local LLM environment is using Docker Compose:
-
-```bash
-# Start the local LLM server and the Quarkus application
-docker-compose up -d
-```
-
-This will start an Ollama server with the Llama3 model and the Quarkus application.
-
-### Option 2: Manual Setup
-
-If you prefer to run Ollama directly on your machine:
-
 1. Install Ollama:
 ```bash
 # On macOS or Linux
